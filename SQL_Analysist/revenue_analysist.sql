@@ -1,4 +1,4 @@
-﻿
+﻿Create view 
 alter view join_table as 
 select o.[order_id],
        p.product_id,
@@ -18,13 +18,13 @@ left join [dbo].[product_catagory] pc on p.product_category_name = pc.product_ca
 left join [dbo].[customer] c on o.customer_id = c.customer_id 
 left join [dbo].[seller] s on oi.seller_id = s.seller_id
 
-----
+----Top products with the most orders
 select top 5 [product_category_name_english],
 	   count(order_id) as total_order
 from join_table
 group by [product_category_name_english]
 order by total_order desc
----
+---Top products that bring high revenue
 select top 5 [product_category_name_english],
        sum(price) as total_revenue
 from join_table
@@ -62,7 +62,7 @@ SELECT order_id,
         ELSE 'Other'
     END AS product_group
 FROM join_table
----
+---Product group has high orders and revenue
 select top 5 count(distinct o.[order_id]) as total_order,
        --sum([price]) as total_revenue,
        product_group
@@ -78,7 +78,7 @@ select count([seller_id]) as count_seller,
 from join_table
 group by  [seller_city],[seller_state]
 order by  count_seller desc
----
+--- Top areas with high revenue
 SELECT TOP 5
     [seller_state],
     SUM(price) AS total_revenue,
@@ -100,7 +100,7 @@ GROUP BY
     [seller_state]
 ORDER BY
     total_order DESC;
----
+---Select cities in each region that bring in high revenue
 DECLARE @seller_state VARCHAR(255);
 DECLARE @total_revenue DECIMAL(18, 2);
 DECLARE @city_cursor CURSOR;
@@ -123,7 +123,7 @@ OPEN @city_cursor;
     
  WHILE @@FETCH_STATUS = 0
     BEGIN
-        -- Lấy top 3 thành phố có doanh thu cao nhất cho mỗi state
+        -- Get the top 3 cities with the highest revenue for each state
         SELECT TOP 3
 		    [seller_state],
             [seller_city],
@@ -140,7 +140,7 @@ OPEN @city_cursor;
 
         FETCH NEXT FROM @city_cursor INTO @seller_state, @total_revenue;
     END;
-------
+------Select cities in each region that have high orders
 
 DECLARE @seller_state VARCHAR(255);
 DECLARE @total_order DECIMAL(18, 2);

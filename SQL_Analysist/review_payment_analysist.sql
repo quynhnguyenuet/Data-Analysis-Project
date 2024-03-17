@@ -1,3 +1,4 @@
+-- Create View
 alter VIEW order_review_payment
 AS
 SELECT 
@@ -87,7 +88,7 @@ from [dbo].[order_payment] op right join [dbo].[orders] o on op.[order_id] = o.[
 WHERE [payment_type] is not null
 group by [payment_type]
 order by total_order desc
-----
+----Trend analysis based on installment payments over time
 WITH OrdersWithInstallments AS (
     SELECT 
         COUNT(distinct order_id) AS total_order,
@@ -133,4 +134,3 @@ from order_review_payment
 group by [payment_type]
 order by avg_value desc
 
-----
