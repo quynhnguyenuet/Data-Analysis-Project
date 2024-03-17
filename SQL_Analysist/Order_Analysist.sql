@@ -105,9 +105,11 @@ FROM
 GROUP BY 
     DATEPART(MONTH, [order_purchase_timestamp])
 Order by  DATEPART(MONTH,[order_purchase_timestamp] ) asc
+
 --- Avg. Time_delivery, Avg. Approved_time
 select  AVG(DATEDIFF(HOUR,[order_purchase_timestamp],[order_approved_at])) from  [dbo].[orders]
 select  AVG(DATEDIFF(DAY, [order_delivered_carrier_date], [order_delivered_customer_date])) from [dbo].[orders]
+
 ---Number of orders delivered compared to expected
 SELECT count(order_id) as total_order,
     COUNT(CASE WHEN [order_delivered_customer_date] > [order_estimated_delivery_date] THEN [order_id] END) AS late_deliveries,
@@ -117,6 +119,7 @@ SELECT count(order_id) as total_order,
     COUNT(CASE WHEN [order_delivered_customer_date] = [order_estimated_delivery_date] THEN [order_id] END) AS on_time_deliveries
 FROM 
     [dbo].[orders]
+
 ---order_status
 select count([order_id]) as count_order,
        [order_status] 
