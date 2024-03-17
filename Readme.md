@@ -17,10 +17,12 @@ You can dowload hear : [Data Source](https://github.com/quynhnguyenuet/Data-Anal
 ![image-1](https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Image/Order_Dashboard.png)
 
 Dashboard gives an overview of order status over the years, order trends by month, day of the week and time of day. At the same time, Dashboard analyzes order acceptance time, average delivery time, delivery status sooner or later than expected, number of canceled orders, thereby making decisions to improve business situation.
+
 **Page 2 - Review, Payment Overview and Analysis**
 ![image-2](https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Image/Review_Payment_Dashboard.png)
 Dashboard provides information about the number of reviews on the total order, calculates the average score, analyzes the review score based on delivery status, and analyzes the method used to pay for the order, the payment rate. Payment by term and not by term
-**Page 2 - Revenue Overview and Analysis**
+
+**Page 3 - Revenue Overview and Analysis**
 ![image-3](https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Image/Revenue_Dashboard.png)
 Dashboard provides information about yearly revenue and monthly revenue. Shows which products or product groups have the highest and lowest revenue and analyzes which regions and cities within the region have the highest revenue
 
