@@ -89,6 +89,12 @@
 
 * Case 1 : Outliers
 - Result
+   <br>
+ <p align="center">
+    <kbd> <img width="400" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_case_2.png"> </kbd> <br>
+     
+</p>
+<br>
 * Group 0:
 
     Recency (Time since last transaction): Average about 308 days.
