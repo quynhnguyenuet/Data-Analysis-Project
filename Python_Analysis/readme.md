@@ -14,14 +14,26 @@
 - Prepare Dataset 
 - Calculate RFM metrics from available customer data
 - After preparing the data set, we proceed to remove outliers for the clustering process. By applying **isolation forest** . This is because the isolation forest identifies outliers in a multivariate manner, so I feel this method is more suitable for identifying outliers.
-
+<br>
+<p align="center">
+    <kbd> <img width="600" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Number%20Outlier%20and%20Non%20-%20Outlier.png"> </kbd> <br>
+     Outlier and Non-Outlier Data by Isolation Forest
+</p>
+<br>
 - Because the number of outliers is quite large, outliers are analyzed separately.
+
  ### Data Annalysis
  * Case 1 : Not Outliers
  - Distribution plot of RFM (recency, frequency, monetary)
 
  - 
  - Determine the optimal k value using the **Elbow Method**
+ <br>
+ <p align="center">
+    <kbd> <img width="600" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Elbow.png"> </kbd> <br>
+     Elbow curve
+</p>
+<br>
 
  - It can be seen that the optimal k value with the **Elbow method** is 4 or 5
  - Determine the optimal k value using **Silhouette Score**
@@ -29,8 +41,19 @@
     - For n_clusters = 5 The average silhouette_score is : 0.5671484370034111
 
  - Result with k = 4
+  <br>
+ <p align="center">
+    <kbd> <img width="600" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_1.png"> </kbd> <br>
+     
+</p>
+<br>
     In the graph, you can see that the frequency components seem to come from the same point, so we will create a table of the centroid values of each cluster for each component to be able to see the actual frequency value for each cluster different
- 
+   <br>
+ <p align="center">
+    <kbd> <img width="600" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_2.png"> </kbd> <br>
+     
+</p>
+<br>
 
  * Group 0:
         Recency: The average Recency of this group is about 228 days, meaning they made a purchase about 228 days ago.
