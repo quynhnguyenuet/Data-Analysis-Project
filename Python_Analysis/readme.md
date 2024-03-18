@@ -29,13 +29,13 @@
   <br>
  <p align="center">
     <kbd> <img width="600" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/rfm.png"> </kbd> <br>
-     Elbow curve
+ 
 </p>
 <br>
  - Determine the optimal k value using the **Elbow Method**
  <br>
  <p align="center">
-    <kbd> <img width="300" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Elbow.png"> </kbd> <br>
+    <kbd> <img width="200" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Elbow.png"> </kbd> <br>
      Elbow curve
 </p>
 <br>
@@ -48,14 +48,14 @@
  - Result with k = 4
   <br>
  <p align="center">
-    <kbd> <img width="300" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_1.png"> </kbd> <br>
+    <kbd> <img width="200" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_1.png"> </kbd> <br>
      
 </p>
 <br>
     In the graph, you can see that the frequency components seem to come from the same point, so we will create a table of the centroid values of each cluster for each component to be able to see the actual frequency value for each cluster different
    <br>
  <p align="center">
-    <kbd> <img width="300" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_2.png"> </kbd> <br>
+    <kbd> <img width="200" alt="distortion" src="https://github.com/quynhnguyenuet/Data-Analysis-Project/blob/main/Python_Analysis/Image/Result_2.png"> </kbd> <br>
      
 </p>
 <br>
